@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+h1 {
+    color: green;
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2 {
+    color: red;
+    font-style: bold;
+    margin-top: 02cm;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0em;
+}
+body, input[type= "text"], button {
+color: orange;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
