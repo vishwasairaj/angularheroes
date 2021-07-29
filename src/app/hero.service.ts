@@ -7,18 +7,15 @@ import { MessageService } from './message.service';
   providedIn: 'root'
 })
 export class HeroService  {
-  name: string = "vishwa"
-  constructor(private mesageService: MessageService, private heroservice: HeroService) { }
+  
+  constructor(private mesageService: MessageService) { }
   getHeroes(): Observable<Hero[]> {
     const heroes = of(HEROES);
     this.mesageService.add('HeroService: fetched heroes');
     return heroes;
   }
 
-  getName() {
-    return this.name
-  }
-
+  
   // this is about promises
 
   // getMyfirstName(): Promise<string> {
