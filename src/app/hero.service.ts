@@ -8,10 +8,10 @@ import { MessageService } from './message.service';
 })
 export class HeroService  {
   
-  constructor(private mesageService: MessageService) { }
+  constructor(private messageService: MessageService) { }
   getHeroes(): Observable<Hero[]> {
     const heroes = of(HEROES);
-    this.mesageService.add('HeroService: fetched heroes');
+    this.messageService.add('HeroService: fetched heroes');
     return heroes;
   }
 
@@ -61,4 +61,10 @@ export class HeroService  {
   //   })
   // }
 
+
+getHero(id: number): Observable<Hero> {
+  const hero = HEROES.find(h => h.id ===id)!;
+  this.messageService.add('HeroService: fetched hero id=${id})`; ');
+  return of(hero);
+}
 }
